@@ -16,7 +16,11 @@ public class Main {
 			String codeProposal = sc.nextLine();
 			//check if correct input
 			if(codeProposal.matches("[0-9]{4}")) {
-				;
+				//check if the player guessed the code
+				if(code.equals(codeProposal)) {
+					System.out.println("Bravo! vous avez deviné le code!");
+					return;
+				}
 			}
 			
 		}
