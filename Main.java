@@ -1,11 +1,13 @@
 package jeuCodeSecret;
 
-import java.util.Arrays;
-import java.util.List;
+
+import java.util.AbstractMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String code = generateCode();
@@ -65,7 +67,9 @@ public class Main {
 	
 	/**
 	 * function to check if the numbers are present but not correctly placed
-	 * 
+	 * @param codeProposal the proposal code by the user
+	 * @param code the generated code be the program
+	 * @return the number  
 	 */
 	public static int checkIfPresentNumbers(String codeProposal, String code) {
 		int nOfPresentChars = 0;
