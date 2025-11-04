@@ -1,16 +1,36 @@
 package jeuCodeSecret;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(generateCode());
+		String code = generateCode();
+		Scanner sc = new Scanner(System.in);
+		boolean playing = true;
+		
+		//start the game
+		while(playing) {
+			//get user input
+			String codeProposal = sc.nextLine();
+			//check if correct input
+			if(codeProposal.matches("[0-9]{4}")) {
+				;
+			}
+			
+		}
+				
+		
 	}
 	
-	public static int generateCode() {
-		/
+	public static String generateCode() {
+		/**
+		 * function to generate the random number
+		 * @return a number between 0000 and 9999 
+		 */
 		int num = (int) (Math.random() * 10000);
-		return Integer.parseInt(String.format("%04d", num));
+		return String.format("%04d", num);
 	}
 
 }
