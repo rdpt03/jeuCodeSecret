@@ -8,6 +8,7 @@ public class Main {
 	}
 	
 	public static int generateCode() {
+		/
 		int num = (int) (Math.random() * 10000);
 		return Integer.parseInt(String.format("%04d", num));
 	}
